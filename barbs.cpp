@@ -1,13 +1,15 @@
 #include <iostream>
-using namespace std;
-
 int main()
 {
+    unsigned int n;
+    int a;
+    int j;
+
     for(int i = 0; i<5; i++){
-    for(int j = 0; j<2; j++){
-    cout<<"a[ "<<i<<"]["<<j<<"]
+    for(int j =0; j<2; j++){
+    std::cout << "a=[ " << i << "]["<< j <<"]";
     }
-    cout<<a[i][j]<<endl;
+    std::cout<< "a ["<<i<<"]["<< j << "]";
     }
 
     return 0;
