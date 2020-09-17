@@ -11,6 +11,6 @@ int main()
     }
     std::cout<< "a ["<<i<<"]["<< j << "]";
     }
-
+    
     return 0;
 }
