@@ -71,12 +71,10 @@ class DrawStarShapePanel extends JPanel{
 
     private static Shape createStar(double centerX, double centerY,
         double innerRadius, double outerRadius, int numRays,
-        double startAngleRad)
-    {
+        double startAngleRad){
         Path2D path = new Path2D.Double();
         double deltaAngleRad = Math.PI / numRays;
-        for (int i = 0; i < numRays * 2; i++)
-        {
+        for (int i = 0; i < numRays * 2; i++){
             double angleRad = startAngleRad + i * deltaAngleRad;
             double ca = Math.cos(angleRad);
             double sa = Math.sin(angleRad);
@@ -90,12 +88,10 @@ class DrawStarShapePanel extends JPanel{
                 relY *= innerRadius;
             }if (i == 0) {
                 path.moveTo(centerX + relX, centerY + relY);
-            }
-            else{
+            }else{
                 path.lineTo(centerX + relX, centerY + relY);
             }
-        }
-        path.closePath();
+        }path.closePath();
         return path;
     }
 }
