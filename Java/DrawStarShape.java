@@ -13,8 +13,7 @@ import javax.swing.SwingUtilities;
 
 public class DrawStarShape
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args){
         SwingUtilities.invokeLater(new Runnable()
         {
             @Override
@@ -25,8 +24,7 @@ public class DrawStarShape
         });
     }
 
-    private static void createAndShowGUI()
-    {
+    private static void createAndShowGUI() {
         JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.getContentPane().add(new DrawStarShapePanel());
@@ -37,11 +35,8 @@ public class DrawStarShape
 
 }
 
-class DrawStarShapePanel extends JPanel
-{
-    @Override
-    protected void paintComponent(Graphics gr)
-    {
+class DrawStarShapePanel extends JPanel{
+    @Override protected void paintComponent(Graphics gr){
         super.paintComponent(gr);
         Graphics2D g = (Graphics2D) gr;
         g.setColor(Color.WHITE);
@@ -87,22 +82,16 @@ class DrawStarShapePanel extends JPanel
             double sa = Math.sin(angleRad);
             double relX = ca;
             double relY = sa;
-            if ((i & 1) == 0)
-            {
+            if ((i & 1) == 0){
                 relX *= outerRadius;
                 relY *= outerRadius;
-            }
-            else
-            {
+            }else {
                 relX *= innerRadius;
                 relY *= innerRadius;
-            }
-            if (i == 0)
-            {
+            }if (i == 0) {
                 path.moveTo(centerX + relX, centerY + relY);
             }
-            else
-            {
+            else{
                 path.lineTo(centerX + relX, centerY + relY);
             }
         }
